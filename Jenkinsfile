@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     tools {
-        dotnetsdk
+        dotnetsdk 'dotnet8'
     }
     stages{
         stage("Restore the dependencies"){
