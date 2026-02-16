@@ -1,5 +1,9 @@
 pipeline{
     agent any
+
+    tools {
+        dotnetsdk 'dotnet6'
+    }
     stages{
         stage("Restore the dependencies"){
             when {branch pattern: "(main|feature.*)", comparator: "REGEXP"}
